@@ -1,26 +1,21 @@
-# Getting Started with Create React App
+# SportSee : P12 - Openclassrooms
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).  
+![made-with-node](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white) ![made-with-react](https://img.shields.io/badge/-ReactJs-61DAFB?style=for-the-badge&logo=react&logoColor=FFFFFF) ![made-with-sass](	https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white) 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project
+Kasa has been in the business of renting apartments between individuals for almost 10 years now. With more than 500 ads posted every day, Kasa is one of the leaders in the rental of apartments between individuals in France.
 
 ## Available Scripts
-
 In the project directory, you can run:
 
 ### `npm start`
-
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
-
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
@@ -29,18 +24,14 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Deliverables
+[React app Code](https://github.com/StephaneLi/StephaneLieumont_11_10032022)  
+[Code react Router](https://github.com/StephaneLi/StephaneLieumont_11_10032022/blob/main/src/index.tsx)  
+[Github-Page Demo](https://stephaneli.github.io/StephaneLieumont_11_10032022/)  
+[Demo OVH server](https://oc.sli-3d.fr/P11_Kasa/)  
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+##  Author
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Stéphane LIEUMONT  
+[Projects OpenClassrooms](https://oc.sli-3d.fr/)  
+[Portfolio 3D](https://portfolio.sli-3d.fr/)  

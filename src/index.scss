@@ -1,0 +1,50 @@
+@import './scss/main.scss';
+
+body {
+  margin: 0;
+  font-family: 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root { 
+  display:flex;
+  flex-direction:column;
+  flex-wrap: nowrap;  
+  height: 100vh;
+  font-weight: 400;
+
+  .main-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+  }
+
+  main {
+    flex-grow: 1;
+    padding:20px 100px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    line-height: 5rem;
+    font-weight: 500;
+  }
+  h2 {
+    font-size: 18px;
+    line-height: 2rem;
+  }
+}
+
+.text{
+  &--primary {
+    color: $primary;
+  }
+}
