@@ -1,0 +1,12 @@
+@import '../../scss/main.scss';
+
+.custom-tooltip {
+  background-color: $primary;
+  padding: 20px 10px;
+  color: white;
+  font-size: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}

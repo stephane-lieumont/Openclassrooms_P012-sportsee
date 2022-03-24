@@ -1,6 +1,6 @@
 import axios from "axios";
 import { Iactivity } from "../types/Iactivity";
-import { IsessionAverage } from "../types/IaverageSessions";
+import { Iaverage, IsessionAverage } from "../types/IaverageSessions";
 import { Iuser } from "../types/Iuser"
 import { IuserPerformance } from "../types/IuserPerformance";
 
@@ -52,8 +52,8 @@ const getUserActivity = async (userId: string): Promise<Iactivity> => {
  * @param {string} userId
  * @returns {Object}
  */
-const getUserAverageSessions = async (userId: string): Promise<IsessionAverage> => {
-  let data: IsessionAverage
+const getUserAverageSessions = async (userId: string): Promise<Iaverage> => {
+  let data: Iaverage
 
   return axios.get(uriMockGetUserAverageSessions)
     .then(res => {
