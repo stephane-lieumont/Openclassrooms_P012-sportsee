@@ -34,8 +34,9 @@ code {
 
   h1 {
     font-size: 3rem;
-    line-height: 5rem;
+    line-height: normal;
     font-weight: 500;
+    margin-bottom: 20px;
   }
   h2 {
     font-size: 18px;
@@ -46,5 +47,28 @@ code {
 .text{
   &--primary {
     color: $primary;
+  }
+}
+
+.flex {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  gap:30px;
+  align-items: center;
+  justify-content: space-between;
+
+  &__row {
+    flex-direction: row;
+  }
+
+  &__column {
+    flex-direction: column;
+  }
+
+  &__item {
+    flex: 1 1 auto;
+    height: 100%;
+    width: 100%;
   }
 }

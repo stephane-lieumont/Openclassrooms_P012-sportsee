@@ -1,9 +1,9 @@
-export interface IUserPerformance {
+export interface IuserPerformance {
   userId: number,
   kind: Map<number, string>
 }
 
-export interface IDataPerformance {
+export interface IdataPerformance {
   value: number,
   kind: number
 }

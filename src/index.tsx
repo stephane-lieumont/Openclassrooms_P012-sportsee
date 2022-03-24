@@ -18,11 +18,11 @@ ReactDOM.render(
         <SideBar/>        
         <main>
           <Routes>  
-            <Route path="/" element={<EmptyInDev />}/>
-            <Route path="/profil" element={<Profile />} />
+            <Route path="/" element={<EmptyInDev />} />
+            <Route path="/profil/:userId" element={<Profile />} />
             <Route path="/reglage" element={<EmptyInDev />}/>
             <Route path="/communaute" element={<EmptyInDev />}/>
-            <Route path="*" element={<EmptyInDev />}/>
+            <Route path="*"/>
           </Routes>
         </main>  
       </div>

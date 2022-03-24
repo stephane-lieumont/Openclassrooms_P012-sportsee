@@ -1,4 +1,4 @@
-export interface IUser {
+export interface Iuser {
   id: number,
   userInfos: IuserInfos,
   todayScore: number,
@@ -13,7 +13,7 @@ export interface IkeyData {
 }
 
 export interface IuserInfos {
-  firstname: String,
-  lastname: String,
+  firstName: String,
+  lastName: String,
   age: number
 }

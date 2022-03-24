@@ -15,7 +15,7 @@ const Header: FunctionComponent = () => {
       <nav>
         <ul>
           <li><NavLink className={({ isActive }) => (isActive ? 'active' : '')} to="/">Acceuil</NavLink></li>
-          <li><NavLink className={({ isActive }) => (isActive ? 'active' : '')} to="/profil">Profil</NavLink></li>
+          <li><NavLink className={({ isActive }) => (isActive ? 'active' : '')} to="/profil/0">Profil</NavLink></li>
           <li><NavLink className={({ isActive }) => (isActive ? 'active' : '')} to="/reglage">Réglage</NavLink></li>
           <li><NavLink className={({ isActive }) => (isActive ? 'active' : '')} to="/communaute">Communauté</NavLink></li>
         </ul>
