@@ -36,7 +36,7 @@ const Activity: FunctionComponent = () => {
             <li className="activity__header__legende__item activity__header__legende__item--secondary">Calories brûler (kCal)</li>
           </ul>          
         </div>       
-        <ResponsiveContainer width="100%" height="90%">
+        <ResponsiveContainer width="100%" height={200}>
           <BarChart
             width={300}
             height={200}
@@ -46,7 +46,7 @@ const Activity: FunctionComponent = () => {
           >          
             <CartesianGrid vertical={false}  strokeDasharray={'2 2'} />
             <XAxis tickLine={false} domain={['dataMin', 'dataMax']}/>
-            <YAxis interval={'preserveStartEnd'} axisLine={false} tickLine={false} orientation={'right'} yAxisId={1} dataKey={'kilogram'} domain={['dataMin - 5', 'dataMax + 5']} />
+            <YAxis interval={'preserveStartEnd'} axisLine={false} tickLine={false} orientation={'right'} yAxisId={1} dataKey={'kilogram'} domain={['dataMin - 5', 'dataMax + 5']} width={35} />
             <YAxis hide yAxisId={2} dataKey={'calories'} domain={['dataMin - 10', 'dataMax + 10']} />
             <Tooltip offset={40} content={<CustomTooltip />} />
             <Bar unit={'kg'} barSize={7} yAxisId={1} shape={<Rectangle radius={[5,5,0,0]} />} dataKey={'kilogram'} fill={'#282D30'} />

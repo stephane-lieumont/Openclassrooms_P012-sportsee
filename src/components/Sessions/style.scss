@@ -1,10 +1,15 @@
 @import '../../scss/main.scss';
 
-.performance {
+.sessions {
   width: 100%;
   height: 100%;
 
   padding: 20px 0px;
   border-radius: 5px;
-  background-color: $background-greydark;
+  background-color: $primary;
+
+  h3 {
+    padding: 0px 30px;
+    opacity: 0.5;
+  }
 }

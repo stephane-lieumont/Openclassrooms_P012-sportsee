@@ -8,8 +8,6 @@ import SideBar from './layout/Sidebar'
 import Profile from './pages/Profile'
 import EmptyInDev from './pages/EmptyInDev'
 
-import './index.scss';
-
 ReactDOM.render(
   <React.StrictMode>
     <Router basename={process.env.PUBLIC_URL}>      

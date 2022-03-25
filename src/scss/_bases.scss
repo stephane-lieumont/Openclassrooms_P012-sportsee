@@ -1,5 +1,3 @@
-@import './scss/main.scss';
-
 body {
   margin: 0;
   font-family: 'Roboto', 'Oxygen',
@@ -31,13 +29,14 @@ code {
 
   main {
     flex-grow: 1;
-    padding:20px 100px;
+    padding:0 100px;
   }
 
   h1 {
     font-size: 3rem;
     line-height: normal;
     font-weight: 500;
+    margin-top: 30px;
     margin-bottom: 20px;
     color: $secondary;
   }
@@ -48,6 +47,7 @@ code {
   }
   h3 {
     font-size: 1rem;
+    line-height: normal;
     color: $secondary;
     font-weight: 500;
   }
@@ -55,7 +55,11 @@ code {
 
 .text{
   &--primary {
-    color: $primary;
+    color: $primary!important;
+  }
+
+  &--white {
+    color: white!important
   }
 }
 
