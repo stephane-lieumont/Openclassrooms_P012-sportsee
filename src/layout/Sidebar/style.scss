@@ -1,15 +1,19 @@
 @import '../../scss/main';
 
 .sidebar {
-  position: relative;
+  position: fixed;
+  top:0;
+  left: 0;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   flex-wrap: nowrap;
   width: 120px!important;
-  min-width: 120px;
+  width: 120px;
   background: $background-dark;
   color: white;
+  z-index: 1;
 
   &__group {
     display: flex;

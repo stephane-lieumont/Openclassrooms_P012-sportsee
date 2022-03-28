@@ -1,17 +1,22 @@
 @import '../../scss/main';
 
 header {
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100vw;
   display:flex!important;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
-  min-height: 90px;
+  height: 90px;
 
   background-color: $background-dark;
   height: 90px;
   overflow: hidden;  
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  z-index: 4;
 
   .logo {
     display: block;
@@ -29,7 +34,11 @@ header {
       list-style-type: none;
 
       li:hover a{
-        color:lighten($primary, 30%)
+        color:lighten($primary, 30%);
+
+        &.active {
+          color:$primary;
+        }
       }
   
       a{
@@ -39,7 +48,7 @@ header {
         transition: color .15s ease-in-out;
 
         &.active {
-          color:$primary;
+          color:$primary;          
         }
       }
     }

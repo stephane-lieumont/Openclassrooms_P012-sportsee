@@ -137,19 +137,19 @@ const Profile: FunctionComponent = () => {
     <section className="profile flex flex__column">
       <h1>Bonjour <span className="text--primary">{ userInfos?.firstName }</span></h1>
       <h2>Félicitation ! Vous avez explosé vos objectifs hier 👏</h2>
-      <div className="profile__stats flex flex__row flex__item">
-        <div className="flex flex__column flex__item">          
+      <div className="profile__stats">
+        <div className="profile__stats__graphs">          
           <div className="profile__activity">
             <Activity activityData={userActivity!} load={userActivityDataLoad} delay={200} />
           </div>          
-          <ul className="profile__rating flex flex__row">
+          <ul className="profile__rating">
             <li><Sessions averageSessionData={userAverageSessions!} load={userAverageSessionLoad} delay={400} /></li>
             <li><Performance listKinds={listKinds!} performanceData={userPerformances!} load={userPerformancesDataLoad} delay={600} /></li>
             <li><Score score={Number(userTodayScore)} load={userDataLoad} delay={800} /></li>
           </ul>          
         </div>
         
-        <ul className="profile__card-infos flex__item">
+        <ul className="profile__stats__infos">
           <li><UserInfos delay={0} icon={iconFire} value={userKeyData?.calorieCount} unit={'kCal'} label={'Calories'} color="red" load={userDataLoad} /></li>
           <li><UserInfos delay={200} icon={iconChicken} value={userKeyData?.proteinCount} unit={'g'} label={'Proteines'} color="blue" load={userDataLoad} /></li>
           <li><UserInfos delay={400} icon={iconApple} value={userKeyData?.carbohydrateCount} unit={'g'} label={'Glucides'} color="yellow" load={userDataLoad} /></li>
