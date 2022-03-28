@@ -1,22 +1,27 @@
 import { FunctionComponent, useEffect, useState } from "react"
+import './style.scss'
 
+/**
+ * Type
+ */
+import { UserInfosProps } from "../../types/TypeComponents"
 /**
  * Components
  */
 import Loader from '../Loader'
 
-import './style.scss'
-
-interface UserInfosProps {
-  value?: number,
-  unit?: string,
-  icon?: string,
-  label?: string,
-  color?: string,
-  delay?: number,
-  load:boolean
-}
-
+/**
+ * Add userinfos data with icon
+ * @param {UserInfosProps} Props
+ * @param {string=} Props.value
+ * @param {string=} Props.unit 
+ * @param {string=} Props.icon Image url
+ * @param {string=} Props.label 
+ * @param {string=} [Props.color=red]
+ * @param {string=} [Props.delay=0] delay to appear in milliseconds
+ * @param {string=} [Props.load=true]
+ * @returns 
+ */
 const UserInfos: FunctionComponent<UserInfosProps> = ({ value ='', unit ='', icon='', label='', color='red', delay = 0, load = true }) => {
   const [iconColor, setIconColor] = useState<string>()
   const [loadComponent, setLoadComponent] = useState(false) 

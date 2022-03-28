@@ -2,7 +2,8 @@ import { FunctionComponent } from "react";
 import './style.scss'
 
 /**
- * Footer layout
+ * SideBar Layout component
+ * @returns {FunctionComponent}
  */
 const SideBar: FunctionComponent = () => {  
   return (

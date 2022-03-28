@@ -4,7 +4,8 @@ import Logo from '../../assets/logo.svg'
 import './style.scss'
 
 /**
- * Header layout
+ * Header Layout component
+ * @returns {FunctionComponent}
  */
 const Header: FunctionComponent = () => {
   return (

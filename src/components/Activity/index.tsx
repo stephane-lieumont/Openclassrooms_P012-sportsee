@@ -1,10 +1,11 @@
 import { FunctionComponent, useEffect, useState} from "react"
 import { CustomTooltip } from "../CustomTooltip"
+import './style.scss'
 
 /**
- * Data Interfaces
+ * Types
  */
-import { IsessionActivity } from "../../types/InterfaceAPI"
+import { ActivityProps } from "../../types/TypeComponents"
 
 /**
  * Components
@@ -25,15 +26,15 @@ import {
   Rectangle
 } from "recharts"
 
-import './style.scss'
-
-
-interface ActivityProps{
-  activityData:IsessionActivity[],
-  load:boolean
-}
-
-const Activity: FunctionComponent<ActivityProps> = ({activityData = [], load = true}) => {
+/**
+ * Graphik chart component of user activity 
+ * @param {ActivityProps} Props
+ * @param {IsessionActivity[]} Props.activityData
+ * @param {number=} [Props.delay=0] delay to appear in milliseconds
+ * @param {boolean=} [Props.load=true] 
+ * @returns {FunctionComponent}
+ */
+const Activity: FunctionComponent<ActivityProps> = ({activityData, delay = 0, load = true}) => {
   const [loadComponent, setLoadComponent] = useState(false) 
 
   useEffect(() => {
@@ -42,8 +43,8 @@ const Activity: FunctionComponent<ActivityProps> = ({activityData = [], load = t
         setLoadComponent(true)
       }
       clearTimeout(timer)
-    }, 1000)
-  }, [load])
+    }, 200 + delay)
+  }, [load, delay])
 
   return (
     <div className="activity">

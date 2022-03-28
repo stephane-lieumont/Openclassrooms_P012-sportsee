@@ -2,6 +2,10 @@ import { FunctionComponent } from "react";
 import { useParams } from "react-router";
 import './style.scss'
 
+/**
+ * Error404-500 Page component
+ * @returns {FunctionComponent}
+ */
 const Error404: FunctionComponent = () => {  
   const status = useParams<string>()
   let statusCode = '404';

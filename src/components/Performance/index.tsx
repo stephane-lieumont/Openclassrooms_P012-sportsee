@@ -1,9 +1,10 @@
 import { FunctionComponent, useState, useEffect } from "react"
+import './style.scss'
 
 /**
- * Data Interfaces
+ * Types
  */
- import { IkindData, IperformanceData } from "../../types/InterfaceAPI"
+ import { PerformanceProps } from "../../types/TypeComponents";
 
 /**
  * Rechart dependencies
@@ -27,15 +28,16 @@ import Loader from "../Loader";
 import { translate } from "../../utils/translate";
 import { firstLetterUpper } from "../../utils/formatString";
 
-import './style.scss'
-
-interface PerformanceProps{
-  listKinds?:IkindData[],
-  performanceData:IperformanceData[],
-  load: boolean
-}
-
-const Performance: FunctionComponent<PerformanceProps> = ({ listKinds, performanceData = [], load = true }) => {
+/**
+ * Graphik chart component of user performances 
+ * @param {PerformanceProps} Props
+ * @param  {IkindData[]} Props.listKinds
+ * @param  {IperformanceData[]} Props.performanceData
+ * @param  {number=} [Props.delay=0]  delay to appear in milliseconds
+ * @param  {boolean=} [Props.load=true]
+ * @returns {FunctionComponent}
+ */
+const Performance: FunctionComponent<PerformanceProps> = ({ listKinds, performanceData, delay = 0, load = true }) => {
   const [loadComponent, setLoadComponent] = useState(false) 
 
   useEffect(() => {
@@ -44,8 +46,8 @@ const Performance: FunctionComponent<PerformanceProps> = ({ listKinds, performan
         setLoadComponent(true)
       }
       clearTimeout(timer)
-    }, 1000)
-  }, [load])
+    }, 200 + delay)
+  }, [load, delay])
 
   const tickFormatter = (value: number) : string => {
     const kindName:string = Object.values(listKinds!)[value - 1].toString()

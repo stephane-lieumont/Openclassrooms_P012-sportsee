@@ -2,6 +2,11 @@ import { FunctionComponent, useEffect, useState} from "react"
 import styles from "../../scss/_theme.scss";
 
 /**
+ * Types
+ */
+import { ScoreProps } from "../../types/TypeComponents";
+
+/**
  * Rechart dependencies
  */
 import { 
@@ -18,12 +23,18 @@ import {
 
 import './style.scss'
 
-interface ScoreProps {
-  score: number,
-  load: boolean
-}
+/**
+ * Graphik chart component of user score 
+ * @param {ScoreProps} Props
+ * @param {number} Props.score
+ * @param {number=} [Props.delay=0] delay to appear in milliseconds
+ * @param {boolean=} [Props.load=true]
+ * @returns 
+ */
+const Score: FunctionComponent<ScoreProps> = ({score, delay = 0, load = true}) => {
+  const [loadComponent, setLoadComponent] = useState(false) 
 
-const Score: FunctionComponent<ScoreProps> = ({score, load = true}) => {
+  // create dataObject to params Rechart component
   const data = [
     {
       "name": "18-24",
@@ -37,9 +48,7 @@ const Score: FunctionComponent<ScoreProps> = ({score, load = true}) => {
       "id": "rechartradial-bar__score",
       "fill": styles.primary
     },
-  ]
-
-  const [loadComponent, setLoadComponent] = useState(false) 
+  ]  
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -47,8 +56,8 @@ const Score: FunctionComponent<ScoreProps> = ({score, load = true}) => {
         setLoadComponent(true)
       }
       clearTimeout(timer)
-    }, 1000)
-  }, [load])
+    }, 200 + delay)
+  }, [load, delay])
 
   return (
     <div className="score">

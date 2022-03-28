@@ -1,9 +1,10 @@
 import { FunctionComponent, useState, useEffect } from "react"
+import './style.scss'
 
 /**
- * Data Interfaces
+ * Type
  */
-import { IsessionAverageData } from "../../types/InterfaceAPI"
+import { SessionsProps } from "../../types/TypeComponents";
 
 /**
  * Rechart dependencies
@@ -21,21 +22,17 @@ import {
  * Components
  */
 import Loader from "../Loader";
-
-/**
- * Custom Tooltip
- */
 import { CustomTooltip } from "../CustomTooltip";
 
-
-import './style.scss'
-
-interface SessionsProps {
-  averageSessionData: IsessionAverageData[],
-  load: boolean
-}
-
-const Sessions: FunctionComponent<SessionsProps> = ({ averageSessionData = [], load = true }) => {
+/**
+ * Graphik chart component of user sessions 
+ * @param {SessionsProps} Props
+ * @param  {IsessionAverageData} Props.averageSessionData
+ * @param  {number=} [Props.delay=0] delay to appear in milliseconds
+ * @param  {boolean=} [Props.load=true]
+ * @returns 
+ */
+const Sessions: FunctionComponent<SessionsProps> = ({ averageSessionData, delay = 0, load = true }) => {
   const [loadComponent, setLoadComponent] = useState(false) 
 
   useEffect(() => {
@@ -44,8 +41,8 @@ const Sessions: FunctionComponent<SessionsProps> = ({ averageSessionData = [], l
         setLoadComponent(true)
       }
       clearTimeout(timer)
-    }, 1000)
-  }, [load])
+    }, 200 + delay)
+  }, [load, delay])
 
   const formatXaxis = (value : any) => {
     const labels: string[] = ['L', 'M', 'M', 'J', 'V', 'S', 'D']

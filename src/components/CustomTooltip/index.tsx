@@ -1,11 +1,18 @@
 import { FunctionComponent } from "react";
 import './style.scss'
 
-interface CustumTooltipProps {
-  active?: boolean,
-  payload?: any
-}
+/**
+ * Types
+ */
+import { CustumTooltipProps } from "../../types/TypeComponents";
 
+/**
+ * Get Custum tooltip on Charts
+ * @param {CustumTooltipProps} Props
+ * @param {boolean} Props.active
+ * @param {Payload} Props.payload
+ * @returns {FunctionComponent}
+ */
 export const CustomTooltip: FunctionComponent<CustumTooltipProps> = ({ active, payload }) => {
   if (active && payload && payload.length) {
     return (

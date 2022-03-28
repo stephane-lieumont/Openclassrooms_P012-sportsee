@@ -1,4 +1,4 @@
-import { Fragment, FunctionComponent, useEffect, useState } from "react"
+import { FunctionComponent, useEffect, useState } from "react"
 import { useParams, Navigate } from "react-router"
 
 /**
@@ -37,7 +37,10 @@ import iconCheeseburger from "../../assets/cheeseburger.svg"
 
 import './style.scss'
 
-
+/**
+ * Profile Page component
+ * @returns {FunctionComponent}
+ */
 const Profile: FunctionComponent = () => {
   const { userId } = useParams<string>()
   const { firstname } = useParams<string>()
@@ -56,7 +59,7 @@ const Profile: FunctionComponent = () => {
   const [listKinds, setListKinds] = useState<IkindData[]>()
   const [userPerformances, setUserPerformances] = useState<IperformanceData[]>()
 
-  // Calls API for all datas
+  // Call API to get Data of user
   useEffect(() => {
     const callApiUserInfos = async () => {
       try { 
@@ -119,27 +122,16 @@ const Profile: FunctionComponent = () => {
     callApiPerformances()
   }, [userId, firstname])
 
+  // Add event when window resize
   useEffect(() => {
     window.addEventListener('resize', () => {});
   }, []);
 
   // Return error server page
-  if(errorAPI === 500) {
-    return (
-      <Fragment>
-        <Navigate to="/erreur500-page-introuvable" state={{status: '500'}} />
-      </Fragment>
-    )
-  }
-
+  if(errorAPI === 500) return <Navigate to="/erreur500-page-introuvable" state={{status: '500'}} />
+  
   // Return error 404 page
-  if(errorAPI === 404) {
-    return (
-      <Fragment>
-        <Navigate to="/erreur404-page-introuvable" />
-      </Fragment>
-    )
-  }
+  if(errorAPI === 404) return <Navigate to="/erreur404-page-introuvable" />  
 
   return (
     <section className="profile flex flex__column">
@@ -148,12 +140,12 @@ const Profile: FunctionComponent = () => {
       <div className="profile__stats flex flex__row flex__item">
         <div className="flex flex__column flex__item">          
           <div className="profile__activity">
-            <Activity activityData={userActivity!} load={userActivityDataLoad} />
+            <Activity activityData={userActivity!} load={userActivityDataLoad} delay={200} />
           </div>          
           <ul className="profile__rating flex flex__row">
-            <li><Sessions averageSessionData={userAverageSessions!} load={userAverageSessionLoad} /></li>
-            <li><Performance listKinds={listKinds!} performanceData={userPerformances!} load={userPerformancesDataLoad} /></li>
-            <li><Score score={Number(userTodayScore)} load={userDataLoad} /></li>
+            <li><Sessions averageSessionData={userAverageSessions!} load={userAverageSessionLoad} delay={400} /></li>
+            <li><Performance listKinds={listKinds!} performanceData={userPerformances!} load={userPerformancesDataLoad} delay={600} /></li>
+            <li><Score score={Number(userTodayScore)} load={userDataLoad} delay={800} /></li>
           </ul>          
         </div>
         

@@ -102,4 +102,5 @@ const API = {
   getUserAverageSessions,
   getUserPerformances
 };
+
 export default API;

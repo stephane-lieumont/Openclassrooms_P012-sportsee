@@ -1,17 +1,17 @@
 import { FunctionComponent } from "react";
-
 import './style.scss'
 
-type LoaderProps = {
-  absolute?: boolean,
-  light?: boolean
-} 
+/**
+ * Types
+ */
+import { LoaderProps } from "../../types/TypeComponents";
 
 /**
- * React Component function : Loader
- * @param props Component props
- * @param props.absolute Css position configuration
- * @param props.light Type color of loader
+ * Loader Component
+ * @param {LoaderProps} Props
+ * @param {boolean=} [Props.absolute=false]
+ * @param {boolean=} [Props.light=false] Type color of loader contrast
+ * @returns {FunctionComponent}
  */
 const Loader: FunctionComponent<LoaderProps> = ({absolute = false, light = false} : LoaderProps) => {
   return (
