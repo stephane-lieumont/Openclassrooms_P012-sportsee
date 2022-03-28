@@ -33,7 +33,7 @@ All datas are now on files mocks
 The build is minified and the filenames include the hashes.\
 
 ## Deliverables  
-[React app Code](https://github.com/StephaneLi/StephaneLieumont_12_23032022)
+[React app Code](https://github.com/StephaneLi/StephaneLieumont_12_23032022)  
 [Github-Page Demo](https://stephaneli.github.io/StephaneLieumont_12_23032022/)  
 [Demo OVH server](https://oc.sli-3d.fr/P12_SportSee/)  
 
