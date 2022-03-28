@@ -1,7 +1,12 @@
-
 import translateEnFr from '../translate/en_fr.json'
 
-export function translate(lang:string, entry:string) {
+/**
+ * Translate data kind name with local language
+ * @param lang 
+ * @param entry 
+ * @returns {string}
+ */
+export function translate(lang:string, entry:string): string | undefined {
   const translateObjectEnFR: Map<string, string> = new Map(Object.entries(translateEnFr));
 
   switch(lang) {

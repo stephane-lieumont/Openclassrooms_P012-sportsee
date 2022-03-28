@@ -4,7 +4,7 @@ import Logo from '../../assets/logo.svg'
 import './style.scss'
 
 /**
- * React Component function : Header layout
+ * Header layout
  */
 const Header: FunctionComponent = () => {
   return (
@@ -15,7 +15,7 @@ const Header: FunctionComponent = () => {
       <nav>
         <ul>
           <li><NavLink className={({ isActive }) => (isActive ? 'active' : '')} to="/">Acceuil</NavLink></li>
-          <li><NavLink className={({ isActive }) => (isActive ? 'active' : '')} to="/profil/0">Profil</NavLink></li>
+          <li><NavLink className={({ isActive }) => (isActive ? 'active' : '')} to="/profil/12/Karl">Profil</NavLink></li>
           <li><NavLink className={({ isActive }) => (isActive ? 'active' : '')} to="/reglage">Réglage</NavLink></li>
           <li><NavLink className={({ isActive }) => (isActive ? 'active' : '')} to="/communaute">Communauté</NavLink></li>
         </ul>

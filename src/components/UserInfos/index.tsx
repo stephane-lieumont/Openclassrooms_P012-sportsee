@@ -1,4 +1,10 @@
 import { FunctionComponent, useEffect, useState } from "react"
+
+/**
+ * Components
+ */
+import Loader from '../Loader'
+
 import './style.scss'
 
 interface UserInfosProps {
@@ -6,11 +12,23 @@ interface UserInfosProps {
   unit?: string,
   icon?: string,
   label?: string,
-  color?: string
+  color?: string,
+  delay?: number,
+  load:boolean
 }
 
-const UserInfos: FunctionComponent<UserInfosProps> = ({ value ='', unit ='', icon='', label='', color='red' }) => {
+const UserInfos: FunctionComponent<UserInfosProps> = ({ value ='', unit ='', icon='', label='', color='red', delay = 0, load = true }) => {
   const [iconColor, setIconColor] = useState<string>()
+  const [loadComponent, setLoadComponent] = useState(false) 
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if(load) {
+        setLoadComponent(true)
+      }
+      clearTimeout(timer)
+    }, 1000 + delay)
+  }, [load, delay])
 
   useEffect(() => {
     switch(color) {
@@ -32,13 +50,17 @@ const UserInfos: FunctionComponent<UserInfosProps> = ({ value ='', unit ='', ico
   }, [color])
 
   return (
-    <div className="user-infos">
+    <div className={`user-infos ${ loadComponent ? '' : 'loading' }`}>
       <div className="user-infos__container flex">
         <div className={`user-infos__icon ${iconColor}`}><img src={icon} alt="fire icone"/></div>
-        <div className="user-infos__value">
+        { loadComponent ? (
+        <div className="user-infos__value">          
           <h4>{value}{unit}</h4>
-          <p>{label}</p>  
+          <p>{label}</p>          
         </div>
+        ) : (
+          <Loader />
+        ) }
       </div>
     </div>
   );

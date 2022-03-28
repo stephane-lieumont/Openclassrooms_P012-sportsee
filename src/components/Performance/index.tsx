@@ -1,48 +1,70 @@
 import { FunctionComponent, useState, useEffect } from "react"
-import { useParams } from "react-router";
-import './style.scss'
-import { ResponsiveContainer, RadarChart, PolarGrid, PolarAngleAxis, Radar } from "recharts";
-import { IdataKind, IdataPerformance, IuserPerformance } from "../../types/IuserPerformance";
-import API from "../../services/API";
+
+/**
+ * Data Interfaces
+ */
+ import { IkindData, IperformanceData } from "../../types/InterfaceAPI"
+
+/**
+ * Rechart dependencies
+ */
+import { 
+  ResponsiveContainer,
+  RadarChart,
+  PolarGrid,
+  PolarAngleAxis,
+  Radar
+} from "recharts";
+
+/**
+ * Components
+ */
+import Loader from "../Loader";
+
+/**
+ * Utils functions
+ */
 import { translate } from "../../utils/translate";
 import { firstLetterUpper } from "../../utils/formatString";
 
-const Performance: FunctionComponent = () => {
-  const { userId } = useParams<string>()
-  const [performanceKind, setPerformanceKind] = useState<IdataKind[]>()
-  const [performanceData, setPerformanceData] = useState<IdataPerformance[]>()
+import './style.scss'
+
+interface PerformanceProps{
+  listKinds?:IkindData[],
+  performanceData:IperformanceData[],
+  load: boolean
+}
+
+const Performance: FunctionComponent<PerformanceProps> = ({ listKinds, performanceData = [], load = true }) => {
+  const [loadComponent, setLoadComponent] = useState(false) 
 
   useEffect(() => {
-    let data: IuserPerformance
-    const callApi = async () => {
-      try { 
-        data = await API.getUserPerformances(userId!)
-        setPerformanceKind(data.kind)
-        setPerformanceData(data.data)
+    const timer = setTimeout(() => {
+      if(load) {
+        setLoadComponent(true)
       }
-      catch (err: any) { 
-        console.error(err.message)
-      }
-    }
-    callApi() 
-  }, [userId])
+      clearTimeout(timer)
+    }, 1000)
+  }, [load])
 
-  function tickFormatter(value: any) : any {
-    const kindName:string = Object.values(performanceKind!)[value - 1].toString()
+  const tickFormatter = (value: number) : string => {
+    const kindName:string = Object.values(listKinds!)[value - 1].toString()
     return firstLetterUpper(translate('fr', kindName)!)
   }
  
   return (
     <div className="performance">
-      {performanceData ? (
+      {loadComponent && listKinds ? (
       <ResponsiveContainer width="100%" height="100%">
         <RadarChart cx="50%" cy="50%" outerRadius="70%" data={performanceData}>
-          <PolarGrid />
-          <PolarAngleAxis tickSize={15} dataKey="kind" stroke="#FFFFFF" tickLine={false} axisLine={false} tickFormatter={tickFormatter} />
-          <Radar name="Performance" dataKey="value" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
+          <PolarGrid radialLines={false} />
+          <PolarAngleAxis tickSize={15} dataKey="kind" stroke="white" tickLine={false} axisLine={false} tickFormatter={tickFormatter} />
+          <Radar name="Performance" dataKey="value" fillOpacity={0.7} className="rechartradar" />
         </RadarChart>
       </ResponsiveContainer>
-      ) : null}
+      ) : (
+        <Loader absolute />
+      )}
     </div>
   )
 }

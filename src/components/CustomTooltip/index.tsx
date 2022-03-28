@@ -1,7 +1,12 @@
 import { FunctionComponent } from "react";
 import './style.scss'
 
-export const CustomTooltip: FunctionComponent = ({ active, payload } : any) => {
+interface CustumTooltipProps {
+  active?: boolean,
+  payload?: any
+}
+
+export const CustomTooltip: FunctionComponent<CustumTooltipProps> = ({ active, payload }) => {
   if (active && payload && payload.length) {
     return (
       <div className={`custom-tooltip ${ payload[0].fill === '#fff' ? 'light' : '' }`}>

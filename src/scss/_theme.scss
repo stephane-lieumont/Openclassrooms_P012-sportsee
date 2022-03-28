@@ -4,10 +4,16 @@ $grey: #74798C;
 $blue: #4AB8FF;
 $yellow: #F9CE23;
 $pink: #FD5181;
-
-
-
 $background-dark: #020203;
 $background-greydark: #282D30;
 $background-light: #FBFBFB;
 $background-greyLigth: #E5E5E5;
+
+:export {
+  primary: $primary;
+  secondary: $secondary;
+  grey: $grey;
+  blue: $blue;
+  yellow: $yellow;
+  pink: $pink;
+}

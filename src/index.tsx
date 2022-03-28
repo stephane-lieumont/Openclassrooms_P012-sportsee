@@ -1,12 +1,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom'
+import { Navigate } from 'react-router'
 
+/**
+ * Import Layout Components
+ */
 import Header from './layout/Header'
 import SideBar from './layout/Sidebar'
 
+/**
+ * Import Pages Components
+ */
 import Profile from './pages/Profile'
-import EmptyInDev from './pages/EmptyInDev'
+import Error404 from './pages/Error404'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,11 +23,11 @@ ReactDOM.render(
         <SideBar/>        
         <main>
           <Routes>  
-            <Route path="/" element={<EmptyInDev />} />
-            <Route path="/profil/:userId" element={<Profile />} />
-            <Route path="/reglage" element={<EmptyInDev />}/>
-            <Route path="/communaute" element={<EmptyInDev />}/>
-            <Route path="*"/>
+            <Route path="/" element={<Navigate to="/profil/12/Karl" />}/>{/* Redirect to profil 12 page */}
+            <Route path="/profil/:userId/:firstname" element={<Profile />} />
+            <Route path="/reglage" element={<Navigate to="/profil/12/Karl" />}/>{/* Redirect to profil 12 page */}
+            <Route path="/communaute" element={<Navigate to="/profil/12/Karl" />}/>{/* Redirect to profil 12 page */}
+            <Route path="*" element={<Error404 />}/>
           </Routes>
         </main>  
       </div>

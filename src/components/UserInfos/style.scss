@@ -9,6 +9,12 @@
   background-color: $background-light;
   display: flex;
   align-items: center;
+  transition: all .3s ease-in-out;
+
+  &.loading {
+    opacity: 0;
+    transform: translateY(50px);
+  }
 
   h4 {
     font-size: 1.2rem;

@@ -27,9 +27,16 @@
   }
 
   &__rating {
-    flex: 1 1 100%;
+    flex-wrap: wrap!important;
     height: 100%;
-    width: 100%;
+    width: 100%;    
     max-height: 250px;
+
+    li {
+      flex-wrap: wrap!important;
+      flex-grow: 3;
+      min-width: 300px;
+      height: 100%;
+    }
   }
 }
