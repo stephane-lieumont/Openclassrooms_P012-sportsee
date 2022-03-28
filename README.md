@@ -26,7 +26,7 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ### `npm run deploy`  
-Builds the app for production to the `build` folder.\
+Builds the app for production on branch production only to the `build` folder.\
 And push on branch gh-page the application.
 All datas are now on files mocks
 
