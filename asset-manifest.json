@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/StephaneLieumont_12_23032022/static/css/main.c1ed412e.css",
-    "main.js": "/StephaneLieumont_12_23032022/static/js/main.117a908b.js",
-    "static/media/logo.svg": "/StephaneLieumont_12_23032022/static/media/logo.4f7d04471aec4f505e2e1277589c18db.svg",
-    "static/media/swimming.svg": "/StephaneLieumont_12_23032022/static/media/swimming.bc12b705d445672f550a.svg",
-    "static/media/cycling.svg": "/StephaneLieumont_12_23032022/static/media/cycling.fe885ecda828d3e2f637.svg",
+    "main.css": "/StephaneLieumont_12_23032022/static/css/main.53b372bf.css",
+    "main.js": "/StephaneLieumont_12_23032022/static/js/main.6d9ab0e5.js",
+    "static/media/logo.svg": "/StephaneLieumont_12_23032022/static/media/logo.6b98dd99481b721d6d30fc84f9b0ff26.svg",
+    "static/media/swimming.svg": "/StephaneLieumont_12_23032022/static/media/swimming.b18477460c84b3f5bed7.svg",
+    "static/media/cycling.svg": "/StephaneLieumont_12_23032022/static/media/cycling.bafe49e6fda11005d281.svg",
     "index.html": "/StephaneLieumont_12_23032022/index.html",
-    "static/media/apple.svg": "/StephaneLieumont_12_23032022/static/media/apple.95581ba1b204199334e122af4784ab16.svg",
-    "static/media/chicken.svg": "/StephaneLieumont_12_23032022/static/media/chicken.ffbc3b88a759c706993bb26fbd66113b.svg",
-    "static/media/relaxation.svg": "/StephaneLieumont_12_23032022/static/media/relaxation.76760efccddf14928ee9.svg",
-    "static/media/cheeseburger.svg": "/StephaneLieumont_12_23032022/static/media/cheeseburger.18f60e0efe37e86bcac036d673f0bab0.svg",
-    "static/media/fire.svg": "/StephaneLieumont_12_23032022/static/media/fire.25fef86ed5860200bdf90f9cd185e1e3.svg",
-    "static/media/weight.svg": "/StephaneLieumont_12_23032022/static/media/weight.9d22814b98d0ca386d9d.svg",
-    "main.c1ed412e.css.map": "/StephaneLieumont_12_23032022/static/css/main.c1ed412e.css.map",
-    "main.117a908b.js.map": "/StephaneLieumont_12_23032022/static/js/main.117a908b.js.map"
+    "static/media/apple.svg": "/StephaneLieumont_12_23032022/static/media/apple.635d4b8bb7d8f64408ef3032c93ec526.svg",
+    "static/media/chicken.svg": "/StephaneLieumont_12_23032022/static/media/chicken.75051c1665b940bb3dc5f760ba41ff60.svg",
+    "static/media/relaxation.svg": "/StephaneLieumont_12_23032022/static/media/relaxation.902174480ad3248d93f0.svg",
+    "static/media/cheeseburger.svg": "/StephaneLieumont_12_23032022/static/media/cheeseburger.27ce32674148dab385abc4be5a4fcec6.svg",
+    "static/media/fire.svg": "/StephaneLieumont_12_23032022/static/media/fire.b8c276e93e1df6b1691a9b5fe7fc5450.svg",
+    "static/media/weight.svg": "/StephaneLieumont_12_23032022/static/media/weight.4fd7249abf4f773b92a2.svg",
+    "main.53b372bf.css.map": "/StephaneLieumont_12_23032022/static/css/main.53b372bf.css.map",
+    "main.6d9ab0e5.js.map": "/StephaneLieumont_12_23032022/static/js/main.6d9ab0e5.js.map"
   },
   "entrypoints": [
-    "static/css/main.c1ed412e.css",
-    "static/js/main.117a908b.js"
+    "static/css/main.53b372bf.css",
+    "static/js/main.6d9ab0e5.js"
   ]
 }
