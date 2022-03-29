@@ -24,7 +24,7 @@
       max-width: 220px;
       display:flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: space-between;      
     }
 
     &__graphs {
@@ -35,6 +35,10 @@
       gap: 30px;
       min-width:68%;
     }
+  }
+
+  &__activity {
+    max-height: 270px;
   }
 
   &__rating {
@@ -48,9 +52,9 @@
 
     li {
       flex: 1;
-      min-height: 270px;
       width: 100%;
       min-width: 280px;
+      height: 270px;
     }
   }
 

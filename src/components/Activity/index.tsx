@@ -56,10 +56,10 @@ const Activity: FunctionComponent<ActivityProps> = ({activityData, delay = 0, lo
         </ul>          
       </div> 
       {loadComponent ? (    
-      <ResponsiveContainer width="100%" height={200}>
+      <ResponsiveContainer width="100%" height={155}>
         <BarChart
           width={300}
-          height={200}
+          height={155}
           barGap={6}
           margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
           data={activityData}
