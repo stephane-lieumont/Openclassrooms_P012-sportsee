@@ -28,7 +28,7 @@ const uriMockGetUserPerformances: string = process.env.PUBLIC_URL + "/mocks/getU
 const getUserData = async (userId: string): Promise<IuserData> => {
   let data: IuserData
 
-  return axios.get(`http://192.168.1.2:3000/user/${userId}`)
+  return axios.get(`${process.env.REACT_APP_API_HOST}/user/${userId}`)
     .then(res => {
       data = res.data.data      
       return data
@@ -46,7 +46,7 @@ const getUserData = async (userId: string): Promise<IuserData> => {
 const getUserActivity = async (userId: string): Promise<Iactivity> => {
   let data: Iactivity
 
-  return axios.get(`http://192.168.1.2:3000/user/${userId}/activity`)
+  return axios.get(`${process.env.REACT_APP_API_HOST}/user/${userId}/activity`)
     .then(res => {
       data = res.data.data
       return data
@@ -65,7 +65,7 @@ const getUserActivity = async (userId: string): Promise<Iactivity> => {
 const getUserAverageSessions = async (userId: string): Promise<IsessionAverage> => {
   let data: IsessionAverage
 
-  return axios.get(`http://192.168.1.2:3000/user/${userId}/average-sessions`)
+  return axios.get(`${process.env.REACT_APP_API_HOST}/user/${userId}/average-sessions`)
     .then(res => {
       data = res.data.data
       return data
@@ -83,7 +83,7 @@ const getUserAverageSessions = async (userId: string): Promise<IsessionAverage> 
 const getUserPerformances = async (userId: string): Promise<IuserPerformance> => {
   let data: IuserPerformance
 
-  return axios.get(`http://192.168.1.2:3000/user/${userId}/performance`)
+  return axios.get(`${process.env.REACT_APP_API_HOST}/user/${userId}/performance`)
     .then(res => {
       data = res.data.data
       return data

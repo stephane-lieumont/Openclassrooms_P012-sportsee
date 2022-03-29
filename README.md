@@ -16,6 +16,7 @@ Sportsee is an application dedicated to sports catching and progress monitoring.
 
 ### 2.2 Frontend  
 - Clone this repository.
+- Change variable `REACT_APP_API_HOST` in .env file to your URL where API is running
 - The `npm install` command will allow you to install the dependencies.
 - The `npm run start` command will allow you to run dev server.
 
