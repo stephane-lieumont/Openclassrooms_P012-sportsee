@@ -9,7 +9,7 @@ Sportsee is an application dedicated to sports catching and progress monitoring.
 ## 2. Install environment  
   
 ### 2.1 Backend  
-- Fork the repository available here [Backen repository](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard)
+- Fork the repository available here [Backend](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard)
 - Clone it on your computer.
 - The `yarn` command will allow you to install the dependencies.
 - The `yarn dev` command will allow you to run the micro API.
