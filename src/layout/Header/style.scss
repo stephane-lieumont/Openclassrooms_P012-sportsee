@@ -21,7 +21,13 @@ header {
   .logo {
     display: block;
     width: 210px;
+    height: 60px;
     padding:0 30px!important;
+
+    svg {
+      width: 210px;
+      height: 90px;
+    }
   }
   
   nav {
@@ -50,6 +56,22 @@ header {
         &.active {
           color:$primary;          
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px), (max-height:850px)  {
+  header {
+    height: 70px;
+
+    .logo {
+      height: 60px;
+    }
+
+    nav{
+      a {
+        font-size: 1.2rem!important;
       }
     }
   }

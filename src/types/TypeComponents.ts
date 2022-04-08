@@ -1,7 +1,6 @@
 import { 
   IsessionActivity,
   IkindData,
-  IperformanceData,
   IsessionAverageData
 } from "./InterfaceAPI";
 
@@ -24,7 +23,7 @@ export type LoaderProps = {
 
 export type PerformanceProps = {
   listKinds:IkindData[],
-  performanceData:IperformanceData[],
+  performanceData:IkindData[],
   delay?: number,
   load?: boolean
 }

@@ -60,7 +60,7 @@ const Performance: FunctionComponent<PerformanceProps> = ({ listKinds, performan
       <ResponsiveContainer width="100%" height="100%">
         <RadarChart cx="50%" cy="50%" outerRadius="70%" data={performanceData}>
           <PolarGrid radialLines={false} />
-          <PolarAngleAxis tickSize={15} dataKey="kind" stroke="white" tickLine={false} axisLine={false} tickFormatter={tickFormatter} />
+          <PolarAngleAxis tickSize={10} dataKey="kind" stroke="white" tickLine={false} axisLine={false} tickFormatter={tickFormatter} />
           <Radar name="Performance" dataKey="value" fillOpacity={0.7} className="rechartradar" />
         </RadarChart>
       </ResponsiveContainer>

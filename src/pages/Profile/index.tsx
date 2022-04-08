@@ -23,8 +23,7 @@ import {
   IuserData,
   Iactivity,
   IsessionAverageData,
-  IkindData,
-  IperformanceData
+  IkindData
 } from "../../types/InterfaceAPI"
 
 /**
@@ -57,7 +56,7 @@ const Profile: FunctionComponent = () => {
   const [userActivity, setUserActivity] = useState<IsessionActivity[]>()
   const [userAverageSessions, setUserAverageSessions] = useState<IsessionAverageData[]>()
   const [listKinds, setListKinds] = useState<IkindData[]>()
-  const [userPerformances, setUserPerformances] = useState<IperformanceData[]>()
+  const [userPerformances, setUserPerformances] = useState<IkindData[]>()
 
   // Call API to get Data of user
   useEffect(() => {
@@ -143,9 +142,9 @@ const Profile: FunctionComponent = () => {
             <Activity activityData={userActivity!} load={userActivityDataLoad} delay={200} />
           </div>          
           <ul className="profile__rating">
-            <li><Sessions averageSessionData={userAverageSessions!} load={userAverageSessionLoad} delay={400} /></li>
-            <li><Performance listKinds={listKinds!} performanceData={userPerformances!} load={userPerformancesDataLoad} delay={600} /></li>
-            <li><Score score={Number(userTodayScore)} load={userDataLoad} delay={800} /></li>
+            <li className="profile__rating__session"><Sessions averageSessionData={userAverageSessions!} load={userAverageSessionLoad} delay={400} /></li>
+            <li className="profile__rating__performance"><Performance listKinds={listKinds!} performanceData={userPerformances!} load={userPerformancesDataLoad} delay={600} /></li>
+            <li className="profile__rating__score"><Score score={Number(userTodayScore)} load={userDataLoad} delay={800} /></li>
           </ul>          
         </div>
         

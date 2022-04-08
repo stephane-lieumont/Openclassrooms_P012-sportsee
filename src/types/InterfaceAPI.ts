@@ -43,15 +43,10 @@ export interface IkeyData {
 export interface IuserPerformance {
   userId: number,
   kind: IkindData[]
-  data: IperformanceData[]
+  data: IkindData[]
 }
 
 export interface IkindData {
   value: number,
   kind: string
-}
-
-export interface IperformanceData {
-  value: number,
-  kind: number
 }

@@ -45,7 +45,7 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     flex-direction: row;
     align-items: stretch;
     gap: 30px;
@@ -53,9 +53,33 @@
     li {
       flex: 1;
       width: 100%;
-      min-width: 280px;
+      min-width: 120px;
       height: 270px;
     }
   }
+}
 
+@media (max-width: 1200px), (max-height:850px){
+  .profile {
+    &__rating, &__stats, &__stats__graphs, &__stats__infos  {
+      gap: 10px;
+    }
+
+    &__rating {
+      &__performance {
+        min-width: 290px!important;
+      }
+    }
+    &__stats {
+      margin-top: 10px;
+    }
+
+    &__activity {
+      max-height: 270px;
+    }
+
+    &__rating li{
+      height: 230px;
+    }
+  }
 }

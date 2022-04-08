@@ -11,7 +11,7 @@ const Header: FunctionComponent = () => {
   return (
     <header>
       <Link to="/" className="logo">
-        <svg width="210" height="60"><use xlinkHref={Logo + '#logo'}></use></svg>
+        <svg><use xlinkHref={Logo + '#logo'}></use></svg>
       </Link>
       <nav>
         <ul>

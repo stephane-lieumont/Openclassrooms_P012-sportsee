@@ -10,7 +10,6 @@
   justify-content: center;
   flex-wrap: nowrap;
   width: 120px!important;
-  width: 120px;
   background: $background-dark;
   color: white;
   z-index: 1;
@@ -64,5 +63,18 @@
       font-size: 12px;
       font-size: 0.7rem;
     }
+  }
+}
+
+@media (max-width: 1200px), (max-height:850px)  {
+  .sidebar {
+    width: 70px!important;
+    &__icon {
+      height: 40px;
+      width: 40px;
+    }
+    p{
+      line-height: 70px;
+    }    
   }
 }

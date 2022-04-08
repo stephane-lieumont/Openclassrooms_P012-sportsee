@@ -36,6 +36,8 @@ code {
     padding:0 100px;
   }
 
+
+
   h1 {
     font-size: 3rem;
     line-height: normal;
@@ -86,5 +88,53 @@ code {
   &__item {
     height: 100%;
     width: 100%;
+  }
+}
+
+@media (max-width: 1200px), (max-height:850px) {
+  body{
+    h1 {
+      font-size: 2rem!important;
+      line-height: normal!important;
+      margin: 15px 0!important;
+    }
+
+    h2 {
+      font-size: 1rem!important;
+      line-height: normal!important;
+    }
+
+    h3 {
+      font-size: 0.8rem!important;
+      line-height: normal!important;
+    }
+
+    p{
+      font-size: 0.7rem!important;
+    }    
+  }
+
+  
+  main {
+    padding:0 20px!important;
+  }
+}
+
+.main-container {
+  padding-top: 90px;
+  padding-left:120px;
+  flex-grow: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 1200px), (max-height:850px)  {
+  #root {
+    .main-container {
+      padding-top: 80px!important;
+      padding-left:70px!important;
+    }
   }
 }
